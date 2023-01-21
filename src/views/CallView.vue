@@ -36,15 +36,10 @@ export default {
         removeLastNumber() {
             this.displayValue = this.displayValue.slice(0, -1)
         },
+        
         callNumber() {
-            const date = new Date()
-            const call = {
-                phoneNumber: this.displayValue,
-                contactName: this.contactName,
-                date: date.toLocaleString()
-            }
+            let call = { pseudo: this.contactName, age: this.displayValue }
             this.$store.dispatch('ajoutCall', call)
-            alert(`Tu as appelé ${this.contactName} - Numéro : ${this.displayValue} le ${call.date}`)
         }
     }
 }

@@ -1,12 +1,10 @@
 <template lang="">
     <div>
-        <h1>Personnage</h1>
-
         <FormPerso :personnages="personnages"/>
 
         <div class="cartes">
             <div v-for="personnages in personnages" :key="personnages.pseudo" class="perso">
-                <CartePerso :personnages="personnages"/>
+                <CartePerso class="text" :personnages="personnages"/>
             </div>
         </div>
 
@@ -38,24 +36,26 @@ export default {
 
 <style scoped>
 
-    .cartes {
-        margin: 50px;
-        display: flex;
-        gap: 20px;
-        flex-wrap: wrap;
-        justify-content: space-around;
-    }
+.cartes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
 
-    .perso {
-        width: 200px;
-        margin: 0 auto;
-        height: 200px;
-        background-color: #42b983;
-        border-radius: 10px;
-        padding: 10px;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-    }
+.perso {
+    flex: 1;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0px 0px 10px #ccc;
+    border-radius: 10px;
+    padding: 20px;
+}
 
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
 </style>

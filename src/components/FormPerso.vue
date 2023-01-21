@@ -49,7 +49,7 @@ export default {
 
 <style scoped>
     form {
-        background-color: #42b983;
+        background-color: #2196f3;
         width: 50vw;
         margin: 20px auto;
         display: flex;
@@ -63,7 +63,7 @@ export default {
         padding: 10px;
         border-radius: 10px;
         border: none;
-        background-color: #2c3e50;
+        background-color: #12375d;
         color: white;
         font-weight: bold;
     }

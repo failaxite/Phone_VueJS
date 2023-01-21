@@ -1,32 +1,31 @@
 <template>
   <nav>
-    <router-link to="/">Home</router-link> |
+    <router-link to="/personnage">Contact</router-link> |
     <router-link to="/historique">Historique</router-link> |
-    <router-link to="/personnage">Personnage</router-link> |
     <router-link to="/call">call</router-link> |
   </nav>
   <router-view/>
 </template>
 
 <style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
 nav {
-  padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    background-color: #2196f3;
+    color: #fff;
 }
 
 nav a {
-  font-weight: bold;
-  color: #2c3e50;
+    color: #fff;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 20px;
+    font-weight: bold;
 }
 
-nav a.router-link-exact-active {
-  color: #42b983;
+nav a:hover {
+    color: #999;
 }
 </style>
