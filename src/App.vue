@@ -1,8 +1,9 @@
 <template>
   <nav>
     <router-link to="/">Home</router-link> |
-    <router-link to="/contact">Contacts</router-link> |
-    <router-link to="/personnage">Personnage</router-link>
+    <router-link to="/historique">Historique</router-link> |
+    <router-link to="/personnage">Personnage</router-link> |
+    <router-link to="/call">call</router-link> |
   </nav>
   <router-view/>
 </template>

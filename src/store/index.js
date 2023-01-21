@@ -1,32 +1,45 @@
 import { createStore } from 'vuex'
-import fs from 'fs'
 
 export default createStore({
   state: {
-    personnages: [],
+    compteur: 0,
+    personnages: [
+      {
+          pseudo: 'TuberculeP',
+          age: 15
+      },
+      {
+          pseudo: 'Shikamaru69',
+          age: 16
+      },
+      {
+          pseudo: 'Shikamaru69',
+          age: 17
+      }
+
+      ],
+      calls: [],
   },
+  getters: {
+    getPersonnages: state => state.personnages,
+},
   mutations: {
     ajoutPerso(state, personnage) {
       state.personnages.push(personnage)
-    }
+    },
+    ajoutCall(state, call) {
+      state.calls.push(call)
+    },
   },
   actions: {
+    // L'action ajoutPerso prends en paramètre le personnage à ajouter
     ajoutPerso({commit}, personnage) {
       // Commit la mutation pour ajouter le personnage à l'état personnages
       commit('ajoutPerso', personnage)
-      // utilisez la méthode fs.readFile pour lire le fichier existant
-      fs.readFile('personnages.json', 'utf8', (err, data) => {
-        if (err) throw err;
-        // Parsez les données en objet JSON
-        const jsonData = JSON.parse(data);
-        // Ajoutez les nouvelles données au tableau
-        jsonData.personnages.push(personnage);
-        // Utilisez la méthode fs.writeFile pour écrire les données mises à jour dans le fichier
-        fs.writeFile('personnages.json', JSON.stringify(jsonData), (err) => {
-          if (err) throw err;
-          console.log('Les données ont été ajoutées au fichier!');
-        });
-      });
+    },
+    ajoutCall({commit}, call) {
+      // Commit la mutation pour ajouter le call à l'état calls
+      commit('ajoutCall', call)
     }
   },
   modules: {
