@@ -1,24 +1,20 @@
 # phone_vuejs
 
 ## Project setup
+
+For install all requierements
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+For run the server and access to the web page
 ```
 npm run serve
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
+## Content of the project
 
-### Lints and fixes files
-```
-npm run lint
-```
+📔 Contacts Page (For add contacts and call them)
+☎️ Phone Page (For call any number phone)
+✏️ History Page (For view the history of calls)
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
